@@ -4,3 +4,4 @@ todo:
 - redirect user to login page
 - submit form with provided deets
 - encryption of deets
+- ensure-dk.js: make popup to show user of change

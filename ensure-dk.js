@@ -1,3 +1,4 @@
+if (window.location.pathname != "/en/account/logout") {
     const selectedElement = document.querySelector('.delivery .service--entry.selected');
     if (selectedElement) {
         const deliveryValue = selectedElement.getAttribute('data-delivery');
@@ -7,3 +8,4 @@
             document.querySelector(".delivery--form.desktop").submit();
         }
     }
+}

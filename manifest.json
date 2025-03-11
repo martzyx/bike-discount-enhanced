@@ -5,7 +5,8 @@
   "description": "see name",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
@@ -13,7 +14,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.bike-discount.de/*"],
-      "js": ["ensure-dk.js"]
+      "js": ["ensure-dk.js","login.js"]
     }
   ],
   "action": {

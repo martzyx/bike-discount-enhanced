@@ -3,7 +3,6 @@ if (
   loginStatusEl &&
   !loginStatusEl.classList.contains("account--user-loggedin")
 ) {
-  //  if (window.dataLayer[0].visitorLoginState == "Logged Out") {
   chrome.storage.sync.get(["username", "password"], function (result) {
     if (result.username && result.password) {
       const csrfToken = getCookieValue("__csrf_token-1");
@@ -38,4 +37,6 @@ if (
       }
     }
   });
+} else {
+  console.log("bike-discount enhanced: logged in");
 }

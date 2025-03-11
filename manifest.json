@@ -13,8 +13,23 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.bike-discount.de/*"],
-      "js": ["ensure-dk.js","login.js"]
+      "matches": [
+        "*://*.bike-discount.de/*"
+      ],
+      "js": [
+        "ensure-dk.js",
+        "login.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "login-inject.js"
+      ],
+      "matches": [
+        "*://*.bike-discount.de/*"
+      ]
     }
   ],
   "action": {

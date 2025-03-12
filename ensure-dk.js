@@ -5,7 +5,7 @@ if (window.location.pathname != "/en/account/logout") {
   if (selectedElement) {
     const deliveryValue = selectedElement.getAttribute("data-delivery");
     if (deliveryValue !== "7") {
-//      alert("changing to dk..."); 
+      console.log("bike-discount enhanced: changing country..."); 
       const deliveryID = "7";
       document.querySelector(".hidden_delivery_input").value = deliveryID;
       document.querySelector(".delivery--form.desktop").submit();

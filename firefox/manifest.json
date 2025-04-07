@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "bike-discount enhanced",
+  "version": "0.1",
+  "description": "see name",
+  "applications": {
+    "gecko": {
+      "id": "bike-discount-enhanced@example.com"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "*://*.bike-discount.de/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bike-discount.de/*"
+      ],
+      "js": [
+        "ensure-dk.js",
+        "login.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "login-inject.js"
+  ],
+  "browser_action": {
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+} 
